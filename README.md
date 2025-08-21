@@ -11,12 +11,14 @@
 4. Проверить, что код ответа равен 200.
 ```
 ## Скриншот результата:
-![App Screenshot](<"Screenshot_6">
+<img width="1919" height="1022" alt="Screenshot_6" src="https://github.com/user-attachments/assets/b26addd5-1bcb-4ad1-b915-577e74f3ea10" />
+
 .)
 ### Configuration
 *	URL: https://7359ced2-bd60-46e0-a2f0-3dbd6dc9c681.serverhub.praktikum-services.ru.
 *	Стэк: VSCode с пакетами: `requests`, `pytest`.
 
         
+
 
 
