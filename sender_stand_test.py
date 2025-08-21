@@ -2,15 +2,10 @@ import sendor_stand_request
 import data
 
 # Автотест
-def test_order_creation_and_retrieval():
-    response = create_order(data.order_body)
-
-    track_number = response.json()["track"]
-   
-
-    # Получение данных заказа по треку
-    order_response = get_order(track_number)
-
-    assert order_response.status_code == 200, f"Ошибка: {order_response.status_code}"
-    order_data = order_response.json()
+def test_get_order_from_track_code_200():
+    response_order = sendor_stand_request.post_create_new_order(
+        data.order_body)
+    track = response_order.json()["track"]
+    satus_code = sendor_stand_request.get_order_from_track(track).status_code
+    assert satus_code == 200
     
