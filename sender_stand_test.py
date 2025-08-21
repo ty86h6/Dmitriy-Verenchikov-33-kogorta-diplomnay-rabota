@@ -1,3 +1,6 @@
+import sendor_stand_request
+import data
+
 # Автотест
 def test_order_creation_and_retrieval():
     response = create_order(data.order_body)
