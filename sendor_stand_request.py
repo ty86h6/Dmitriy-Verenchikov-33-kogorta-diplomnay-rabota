@@ -2,15 +2,20 @@ import configuration
 import requests
 import data
 
-# Создание заказа
-def create_order(body):
-    return requests.post (configuration.URL_SERVICE + configuration.CREAT_ORDERS,
-                         json=body)
+# Выполнить запрос на создание заказа.
 
-# Получение заказа по номеру трекера
-def get_order(track_number):
-    get_order_url = f"{configuration.URL_SERVICE}/api/v1/orders/track?t={track_number}"
-    response = requests.get(get_order_url)
-    return response
+
+def post_create_new_order(order):
+    return requests.post(configuration.URL_SERVICE + configuration.CREATE_ORDER_PATH,
+                         json=order,
+                         headers=data.headers)
+
+# Получение заказа по номеру трекера.
+
+
+def get_order_from_track(track):
+    return requests.get(configuration.URL_SERVICE + configuration.FIND_ORDER_FROM_TRACK_PATH + str(track),
+                        headers=data.headers) 
 
     
+
