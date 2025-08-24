@@ -1,4 +1,5 @@
-order_body = {
+headers = {"Content-Type": "application/json"} 
+order_body= {
         "firstName": "Naruto",
         "lastName": "Uchiha",
         "address": "Konoha, 142 apt.",
@@ -8,4 +9,5 @@ order_body = {
         "deliveryDate": "2020-06-06",
         "comment": "Saske, come back to Konoha",
         "color": ["BLACK"]
+
     }
