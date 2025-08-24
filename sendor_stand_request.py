@@ -14,8 +14,9 @@ def post_create_new_order(order):
 
 
 def get_order_from_track(track):
-    return requests.get(configuration.URL_SERVICE + configuration.FIND_ORDER_FROM_TRACK_PATH + str(track),
+    return requests.get(configuration.URL_SERVICE + configuration.GET_ORDER_BY_TRACK_PATH + str(track),
                         headers=data.headers) 
 
     
+
 
