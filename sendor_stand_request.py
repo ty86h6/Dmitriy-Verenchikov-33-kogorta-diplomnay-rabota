@@ -6,7 +6,7 @@ import data
 
 
 def post_create_new_order(order):
-    return requests.post(configuration.URL_SERVICE + configuration.CREATE_ORDER_PATH,
+    return requests.post(configuration.URL_SERVICE + configuration.CREATE_ORDERS_PATH,
                          json=order,
                          headers=data.headers)
 
@@ -18,5 +18,6 @@ def get_order_from_track(track):
                         headers=data.headers) 
 
     
+
 
 
